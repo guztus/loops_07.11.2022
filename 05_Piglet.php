@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 class Piglet
 {
@@ -28,7 +28,7 @@ class Piglet
 //        return $this->score;
 //    }
 
-    public function addScore($points)
+    public function addScore(int $points)
     {
         $this->score += $points;
     }
@@ -66,4 +66,3 @@ while ($gameOne->running) {
 
     echo $gameOne->roll();
 }
-

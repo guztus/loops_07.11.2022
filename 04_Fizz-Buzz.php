@@ -1,9 +1,9 @@
-<?php
+<?php declare(strict_types=1);
 
 class FizzBuzz {
     public int $maxNumber;
 
-    public function __construct($maxNumber)
+    public function __construct(int $maxNumber)
     {
         $this->maxNumber = $maxNumber;
     }
@@ -31,7 +31,7 @@ class FizzBuzz {
     }
 }
 
-$userInput = readline();
+$userInput = (int) readline();
 $newGame = new FizzBuzz($userInput);
 
 $newGame->printFizzBuzz();

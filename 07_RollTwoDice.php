@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 class RollTwoDice
 {
@@ -38,7 +38,13 @@ class RollTwoDice
 }
 
 echo "Desired sum: ";
-$userChoice = readline();
+$userChoice = (int) readline();
+
+if ($userChoice > 12 || $userChoice < 2) {
+    echo "enter a number from 2 to 12\n";
+    exit;
+}
+
 $newGame = new RollTwoDice($userChoice);
 
 while ($newGame->running == true) {

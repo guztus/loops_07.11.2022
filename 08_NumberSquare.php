@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 
 class NumberSquare
 {
@@ -30,10 +30,10 @@ class NumberSquare
 }
 
 echo "Min? ";
-$minNumber = readline();
+$minNumber = (int) readline();
 
 echo "Max? ";
-$maxNumber = readline();
+$maxNumber = (int) readline();
 
 $numbers = new NumberSquare($minNumber, $maxNumber);
 echo $numbers->createRotation();
